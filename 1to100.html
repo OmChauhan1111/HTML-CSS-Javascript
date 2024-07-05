@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>1 to 100 and sum print</title>
+</head>
+<body>
+    <form name="f1">
+        <input type="button" value="1 to 100" onclick="disp()">
+    </form>
+
+    <script>
+        function disp() {
+            var sum = 0;
+            var numbers = '';
+
+            for (var i = 1; i <= 100; i++) {
+                numbers += i + '<br>'; // Accumulate numbers
+                sum += i; // Accumulate sum
+            }
+
+            document.write(numbers); // Write numbers to the document
+            document.write('Sum of numbers: ' + sum); // Write sum to the document
+        }
+    </script>
+</body>
+</html>

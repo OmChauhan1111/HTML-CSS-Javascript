@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Check Even or Odd Program</title>
+    </head>
+    <body>
+
+        <form name="f1">
+            <div>
+                Choose number type: 
+                <select name="numberType">
+                    <option value="even">Even</option>
+                    <option value="odd">Odd</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" onclick="disp(form); return false;" value="Print">
+                <div id="output"></div>
+            </div>
+        </form>
+
+        <script>
+            function disp(form) {
+               
+                var numberType = f1.numberType.value;
+                var outputDiv = document.getElementById('output');
+                outputDiv.innerHTML = ''; // Clear previous content
+                for(var i = 0; i <= 100; i++) {
+                    if((numberType === "even" && i % 2 === 0) || (numberType === "odd" && i % 2 !== 0)) {
+                        outputDiv.innerHTML += i + '<br>';
+                    }
+                }
+            }
+        </script>
+
+    </body>
+</html>

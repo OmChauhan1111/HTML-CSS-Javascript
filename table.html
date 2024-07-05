@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Multipliction table</title>
+</head>
+<body>
+    <form name="f1">
+        Enter a number: <input type="text" name="num1">
+        <input type="button" value="print table" onclick="disp()">
+    </form>
+
+    <script>
+        function disp() {
+            var a = parseInt(f1.num1.value); // Parse input as an integer
+            var table = '<table border="1">';
+            for (var i = 1; i <= 10; i++) {
+                var res = a * i;
+                table += '<tr> <td>' + a + ' X ' + i + ' = ' + res + '</td> </tr>';
+            }
+            table += '</table>';
+            document.write('Multiplication Table: ' + table);
+        }
+    </script>
+</body>
+</html>

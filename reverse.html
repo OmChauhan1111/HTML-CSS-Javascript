@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Check Even or Odd Program</title>
+</head>
+<body>
+
+<form name="f1">
+    <div>
+        Enter a number: <input type="text" name="num1">
+        <input type="submit" onclick="disp(form); return false;" value="Click">
+    </div>
+</form>
+
+<script>
+    function disp(form) {
+        var a, r, c = 0;
+        a = parseInt(f1.num1.value); // Parse the input as an integer
+        while (a !== 0) {
+            r = a % 10;
+            c = (c * 10) + r;
+            a = Math.floor(a / 10); // Correct case of Math.floor()
+        }
+        document.write("Original number is " + f1.num1.value + "<br>");
+        document.write("Reverse number is " + c);
+    }
+</script>
+
+</body>
+</html>

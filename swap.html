@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Swap Program</title>
+</head>
+<body>
+    <form name="f1">
+        1st no.: <input type="text" name="num1">
+        2nd no.: <input type="text" name="num2">
+        <input type="button" value="Swap" onclick="disp()">
+    </form>
+
+    <script>
+        function disp() {
+            var a = f1.num1.value;
+            var b = f1.num2.value;
+            var c;
+            
+            c = a;
+            a = b;
+            b = c;
+
+            document.write('After swapping: First number is ' + a + ', Second number is ' + b + '.');
+        }
+    </script>
+</body>
+</html>

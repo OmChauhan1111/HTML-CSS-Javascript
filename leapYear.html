@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title> Chek Leap Year</title>
+</head>
+<body>
+    <form name="f1">
+        Enter a Year: <input type="text" name="num1">
+        <input type="button" value="Check" onclick="disp()">
+    </form>
+
+    <script>
+        function disp() {
+            var a = f1.num1.value; // Get the input number as a string
+            if((a%4==0 && a%100!=0)|| a%400==0)
+            {
+                document.write(+a+' leap year');
+            }
+            else{
+                document.write(+a+' leap not year');
+
+            }
+            
+        
+        
+        }
+   </script>
+</body>
+</html>

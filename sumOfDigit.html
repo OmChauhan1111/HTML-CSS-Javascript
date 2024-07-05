@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Sum of digits</title>
+</head>
+<body>
+    <form name="f1">
+        Enter a number: <input type="text" name="num1">
+        <input type="button" value="Sum of Digits" onclick="disp()">
+    </form>
+
+    <script>
+        function disp() {
+            var number = f1.num1.value; // Get the input number as a string
+            var sum = 0;
+
+            for (var i = 0; i < number.length; i++) {
+                sum += parseInt(number[i]); // Convert each digit to an integer and add it to the sum
+            }
+
+            document.write('Sum of digits: ' + sum);
+        }
+    </script>
+</body>
+</html>
